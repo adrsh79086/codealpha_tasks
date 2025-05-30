@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="player">
+    <img id="cover" src="images/cover1.jpg" alt="Cover" class="cover" />
+    
+    <h2 id="title">Song Title</h2>
+    <p id="description">Song description goes here...</p>
+
+    <audio id="audio" src="songs/song1.mp3"></audio>
+
+    <div class="controls">
+      <button id="prev">⏮️</button>
+      <button id="playPause">▶️</button>
+      <button id="next">⏭️</button>
+      <button id="fav">🤍</button>
+    </div>
+
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progressBar" value="0" min="0" />
+      <span id="duration">0:00</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

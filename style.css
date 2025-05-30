@@ -1,0 +1,104 @@
+/* Reset + body */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e1e1e, #2c3e50);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Main player box */
+  .player {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+  }
+  
+  /* Cover image */
+  .cover {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Song title */
+  #title {
+    margin: 15px 0 5px;
+    font-size: 20px;
+  }
+  
+  /* Description */
+  #description {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+  
+  .controls button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .controls button:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Favorite highlight */
+  #fav.favorited {
+    color: red;
+  }
+  
+  /* Progress */
+  .progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  #progressBar {
+    flex: 1;
+    accent-color: #ff4081;
+  }
+  
+  /* Responsive */
+  @media (max-width: 400px) {
+    .player {
+      max-width: 90vw;
+    }
+  
+    .controls {
+      flex-wrap: wrap;
+    }
+  
+    .progress-container {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    #progressBar {
+      width: 100%;
+    }
+  }
+  

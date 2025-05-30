@@ -26,7 +26,6 @@ const songs = [
   let isPlaying = false;
   let isFavorite = false;
   
-  // Elements
   const audio = document.getElementById("audio");
   const title = document.getElementById("title");
   const description = document.getElementById("description");
@@ -39,7 +38,6 @@ const songs = [
   const currentTimeEl = document.getElementById("currentTime");
   const durationEl = document.getElementById("duration");
   
-  // Load a song
   function loadSong(index) {
     const song = songs[index];
     title.textContent = song.title;
@@ -56,14 +54,12 @@ const songs = [
     favBtn.textContent = "🤍";
   }
   
-  // Format time MM:SS
   function formatTime(seconds) {
     const min = Math.floor(seconds / 60);
     const sec = Math.floor(seconds % 60).toString().padStart(2, "0");
     return `${min}:${sec}`;
   }
   
-  // Play or pause
   playPause.addEventListener("click", () => {
     if (!isPlaying) {
       audio.play();
@@ -75,7 +71,6 @@ const songs = [
     isPlaying = !isPlaying;
   });
   
-  // Next / Prev
   nextBtn.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     loadSong(currentSongIndex);
@@ -88,30 +83,25 @@ const songs = [
     if (isPlaying) audio.play();
   });
   
-  // Toggle favorite
   favBtn.addEventListener("click", () => {
     isFavorite = !isFavorite;
     favBtn.classList.toggle("favorited", isFavorite);
     favBtn.textContent = isFavorite ? "❤️" : "🤍";
   });
   
-  // Load metadata
   audio.addEventListener("loadedmetadata", () => {
     progressBar.max = audio.duration;
     durationEl.textContent = formatTime(audio.duration);
   });
   
-  // Update progress/time
   audio.addEventListener("timeupdate", () => {
     progressBar.value = audio.currentTime;
     currentTimeEl.textContent = formatTime(audio.currentTime);
   });
   
-  // Seek
   progressBar.addEventListener("input", () => {
     audio.currentTime = progressBar.value;
   });
   
-  // Load initial song
   loadSong(currentSongIndex);
   

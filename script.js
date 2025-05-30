@@ -8,16 +8,16 @@ const songs = [
     },
     {
       name: "song2",
-      title: "Chill Vibes",
-      cover: "images/cover2.png",
+      title: "Perfect",
+      cover: "images/cover2.jpg",
       file: "songs/song2.mp3",
       description: "Smooth chillhop beats perfect for relaxing or studying."
     },
     {
       name: "song3",
-      title: "Ocean Deep",
+      title: "Rap God",
       cover: "images/cover3.jpg",
-      file: "songs/song3.mp3",
+      file: "songs/song3.mp4",
       description: "A soothing melody that echoes the calmness of the ocean."
     }
   ];
